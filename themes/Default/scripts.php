@@ -1,0 +1,1 @@
+<script src="<?php echo ABSPATH?>themes/Default/js/slider.js"></script>

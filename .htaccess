@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ /cheat/index.php?url=$1 [QSA,L]
+
+ErrorDocument 404 /cheat/src/Themes/Default/403.php
+ErrorDocument 404 /cheat/src/Themes/Default/404.php

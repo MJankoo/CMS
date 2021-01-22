@@ -1,0 +1,335 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top_bar {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 4%;
+    height: 3.2vw;
+    border-radius: 50%;
+    margin: 15px 3% 0 0;
+    border: 1px solid #000;
+}
+
+.top_bar_main {
+    margin-top: 25px;
+    width: 78%;
+    height: 50px;
+    border-top: 1px solid #000;
+    position: relative;
+}
+
+.page_title {
+    text-align: center;
+    font-weight: 400;
+    width: 240px;
+    text-transform: uppercase;
+    font-size: 23px;
+    margin: -14px 0 0 20%;
+    display: block;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.page_title a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.search_container {
+    width: 14%;
+    margin: 25px 0 0 3%;
+    height: 30px;
+    border: 1px solid #000;
+}
+
+.search_input {
+    width: calc(100% - 40px);
+    height: 20px;
+    font-size: 15px;
+    margin: 0;
+    padding: 5px;
+    border: 0;
+    outline: none;
+}
+
+.search_icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.search_icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.nav_link {
+    width: 12.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.nav_link:hover {
+    padding-top: 10px;
+}
+
+.left_side {
+    width: 20%;
+}
+
+.right_side {
+    width: calc(80% - 270px);
+    justify-content: space-around;
+}
+
+.best_recipes_section {
+    width: 100%;
+    padding: 20px 0 50px 0;
+    border-right: 1px solid #000;
+    position: relative;
+}
+
+.social_media_container {
+    width: 26px;
+    padding: 20px 0;
+    height: 72px;
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 40%;
+    background-color: #fff;
+}
+
+.social_media {
+    width: 26px;
+    height: 26px;
+}
+
+.social_media:first-child {
+    margin-bottom: 20px;
+}
+
+.social_media img {
+    width: 100%;
+    height: 100%;
+}
+
+.best_recipe {
+    width: 86%;
+    margin: 20px auto 0 auto;
+}
+
+.best_recipe_data {
+    width: 63%;
+    margin-top: 40px;
+}
+
+.best_recipe_image {
+    margin: 0 3% 0 4%;
+    width: 30%;
+}
+
+.best_recipe_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.best_recipe_title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Xanh Mono', monospace;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.more_button {
+    text-transform: uppercase;
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    margin: 20px 0 0 25px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.more_button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.worlds_cuisines_section {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.arrow {
+    width: 7%;
+    line-height: 340px;
+    cursor: pointer;
+}
+
+.left_arrow {
+    transform: rotateY(180deg);
+}
+
+.arrow img {
+    width: 100%;
+    height: 12%;
+}
+
+.worlds_cuisines_main {
+    border-top: 1px solid #000;
+    width: 86%;
+}
+
+.section_title {
+    display: block;
+    width: 350px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: -17px auto 0 auto;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.worlds_cuisines_slider {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.worlds_cuisines_slider_container {
+    width: 99%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.world_cuisine {
+    width: 23%;
+    margin: 0 1%;
+    flex-shrink: 0;
+    height: 20%;
+}
+
+.world_cuisine img {
+    width: 100%;
+    height: 100%;
+}
+
+.last_recipes_section {
+    width: 86%;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+}
+
+.last_recipes_main {
+    margin-top: 50px;
+}
+
+.recipe {
+    margin-bottom: 20px;
+}
+
+.recipe_image {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.recipe_image img {
+    width: 85%;
+    border-radius: 25px;
+}
+
+.recipe_date {
+    display: block;
+    margin: 30px 0 5px 0;
+}
+
+.recipe_title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Xanh Mono', monospace;
+    font-size: 28px;
+}
+
+.recipe .more_button {
+    margin: 55px 10px 0 auto;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.footer_main {
+    width: 86%;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+.footer_copyright {
+    flex-direction: column;
+    padding: 20px 0 30px;
+}
+
+.footer_nav {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.footer_nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer_nav ul li {
+    width: 80px;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.author {
+    margin-top: 30px;
+}
+
+.author, .author a {
+    font-size: 12px;
+    color: #A7A7A7;
+}
