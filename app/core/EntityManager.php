@@ -7,10 +7,6 @@ class EntityManager {
         $this->pdo = $pdo;
     }
 
-    public function persist($object) {
-        echo("DO ZROBIENIA");
-    }
-
     public function flush($object) {
 
     }

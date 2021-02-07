@@ -1,0 +1,323 @@
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.left_side {
+    width: 250px;
+    height: 100vh;
+    background-color: #222c32;
+    color: #a6b3b8;
+    position: fixed;
+}
+
+.right_side {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.user_data {
+    width: 100%;
+    height: 80px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    height: 20px;
+}
+
+.nav_header {
+    background-color: #1a2327;
+    color: #34464b;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.nav_option {
+    text-align: left;
+    cursor: pointer;
+    width: 90%;
+    padding: 15px 5%;
+}
+
+.nav_option a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #a6b3b8;
+    text-decoration: none;
+}
+
+.nav_option:hover {
+    background-color: #253036;
+}
+
+.page_header {
+    width: calc(100% - 60px);
+    padding: 23px 30px;
+    font-size: 30px;
+}
+
+.posts_header {
+    justify-content: space-between;
+}
+
+.add_new {
+    margin: 5px 0 0 20px;
+    border: 1px solid #000;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.add_new a {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+}
+
+.add_new_text {
+    padding: 0 10px;
+}
+
+.add_new_icon {
+    font-size: 38px;
+    width: 30px;
+    text-align: center;
+    border-left: 1px dashed #000;
+}
+
+.search_container {
+    height: 30px;
+    margin-top: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.search_input {
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+.search_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.search_icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.right_side_container {
+    width: 100%;
+    min-height: calc(100% - 80px);
+    overflow: paged-y;
+}
+
+.posts_container {
+    width: calc(100% - 60px);
+    padding: 0 30px 30px 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    background-color: #fff;
+}
+
+thead th {
+    padding: 10px;
+    border-bottom: 1px solid #A7A7A7;
+}
+
+.data {
+    font-weight: 400;
+    height: 45px;
+}
+
+.alternate {
+    background-color: #f9f9f9;
+}
+
+.post_title a {
+    color: #0073aa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post_status {
+    justify-content: center;
+}
+
+.status_box {
+    border-radius: 5px;
+    height: 13px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    color: #fff;
+    margin-top: 12px;
+}
+
+.active {
+    background-color: darkgreen;
+}
+
+.inactive {
+    background-color: firebrick;
+}
+
+.unpublished {
+    background-color: #0073aa;
+    margin-left: 5px;
+}
+
+.post_box {
+    border: 1px solid #ccd0d4;
+    width: calc(100% - 280px);
+    margin-bottom: 35px;
+}
+
+.post_box_title {
+    padding: 3px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: bold;
+}
+
+.post_header {
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #E1E1E1;
+    text-align: left;
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 15px;
+    line-height: 50px;
+}
+
+.required_icon {
+    font-weight: bold;
+    color: red;
+}
+
+.new_post_td {
+    padding: 13px 15px;
+}
+
+.new_post_content {
+    border: 1px solid #ccd0d4;
+}
+
+.new_post_editor {
+    height: 30px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.new_post_input {
+    width: calc(100% - 10px);
+    padding: 0 5px;
+    height: 30px;
+    margin: 0;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    outline: none;
+    font-size: 20px;
+}
+
+.new_post_content_input{
+    resize: vertical;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.new_post_right_box {
+    width: 230px;
+    height: 250px;
+    padding: 10px;
+    margin-left:  30px;
+    border: 1px solid #ccd0d4;
+    background-color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 83px;
+}
+
+.new_post_right_box h3 {
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.recipe_settings_title {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.recipe_settings_input {
+    margin: 5px 0 20px 0;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    width: calc(100% - 10px);
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+}
+
+.recipe_status_input {
+    outline: none;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.recipe_form_submit {
+    float: right;
+    margin-top: 2px;
+    background-color: #00838F;
+    width: 90px;
+    outline: none;
+    border: none;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.recipe_form_submit::after {
+    content: "";
+    clear: both;
+}

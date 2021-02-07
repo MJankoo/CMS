@@ -22,7 +22,7 @@ define('DB_HOSTNAME', 'localhost');
  */
 
 /** Absolute path */
-define('ABSPATH', "../cheat/");
+define('ABSPATH', "");
 
 define('PAGE_NAME', "Cheatormeat.pl");
 

@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Xanh+Mono&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico"/>
-    <link rel="stylesheet" type="text/css"  href='<?php echo ABSPATH."themes/Default/" ?>css/style.css'/>
-    <link rel="stylesheet" type="text/css"  href='<?php echo ABSPATH."themes/Default/" ?>css/container_settings.css'/>
+    <link rel="stylesheet" type="text/css"  href='themes/Default/css/style.css'/>
+    <link rel="stylesheet" type="text/css"  href='themes/Default/css/container_settings.css'/>
 
 </head>
