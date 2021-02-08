@@ -7,3 +7,5 @@ require_once("core/Database.php");
 require_once("core/EntityManager.php");
 require_once("core/Repository.php");
 require_once("core/errorHandler.php");
+
+require_once("model/Przepis.php");
