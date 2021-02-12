@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="http://localhost/cheat/app/admin/themes/Default/css/adminPanel.css">
+    <link rel="stylesheet" type="text/css" href="../app/admin/themes/Default/css/adminPanel.css">
 </head>
 <body>
 <div class="main_container flex">

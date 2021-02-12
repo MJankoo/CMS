@@ -9,7 +9,7 @@
             <tbody>
                 <tr>
                     <th valign="top" class="post_header">Tytuł <span class="required_icon">*</span></th>
-                    <td class="new_post_td"><input class="new_post_input" name="recipe_title" type="text" placeholder="Tytuł przepisu"></td>
+                    <td class="new_post_td"><input class="new_post_input" id="recipe_title_input" name="recipe_title" type="text" placeholder="Tytuł przepisu"></td>
                 </tr>
 
                 <tr>
@@ -54,7 +54,7 @@
             <h4 class="recipe_settings_title">Data publikacji</h4>
             <input class="recipe_settings_input" type="date" name="recipe_date">
             <h4 class="recipe_settings_title">Link</h4>
-            <input class="recipe_settings_input" type="text" name="recipe_link">
+            <input class="recipe_settings_input" id="recipe_link_input" type="text" name="recipe_link" placeholder="link-do-przepisu">
             <h4 class="recipe_settings_title">Status</h4>
             <select class="recipe_status_input" name="recipe_status">
                 <option value="active">Aktywny</option>
@@ -65,3 +65,4 @@
 
     </form>
 </div>
+<script src="../app/admin/themes/Default/js/linkHandler.js"></script>

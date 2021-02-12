@@ -2,7 +2,6 @@
 
 class Recipe {
     public function index() {
-        var_dump("xDDD");
         if(isset($_POST['recipe_title'])) {
             var_dump($_POST['recipe_title']);
             $this->addPost();

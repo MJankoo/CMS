@@ -36,8 +36,14 @@ class Repository {
         return $response;
     }
 
-    public function findAll() {
-
+    public function findAll($amount, $offset = 0) {
+        $query = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT :amount OFFSET :offset";
+        $object = $this->pdo->prepare($query);
+        if($object->execute([$amount, $offset])) {
+            return $object->fetchAll();
+        } else {
+            return "Błąd";
+        }
     }
 
     public function setEntity($class) {

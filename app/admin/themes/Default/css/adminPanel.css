@@ -162,6 +162,10 @@ thead th {
     background-color: #f9f9f9;
 }
 
+.post_data {
+    text-align: center;
+}
+
 .post_title a {
     color: #0073aa;
     font-weight: bold;
@@ -240,7 +244,7 @@ thead th {
 }
 
 .new_post_input {
-    width: calc(100% - 10px);
+    width: 100%;
     padding: 0 5px;
     height: 30px;
     margin: 0;
@@ -253,6 +257,7 @@ thead th {
 .new_post_content_input{
     resize: vertical;
     width: 100%;
+    min-height: 280px;
     padding: 0;
     border: none;
     outline: none;
