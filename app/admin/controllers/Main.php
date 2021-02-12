@@ -2,6 +2,6 @@
 
 class Main {
     public function index() {
-        require_once("app/admin/themes/Default/component/main.php");
+        require_once("themes/admin/Default/component/main.php");
     }
 }

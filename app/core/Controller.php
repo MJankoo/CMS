@@ -12,7 +12,7 @@ class Controller {
 
 
     public function view($view, $data=[]){
-        require_once ("../cheat/themes/Default/" . $view . ".php");
+        require_once ("../cheat/themes/user/Default/" . $view . ".php");
     }
 
 }

@@ -22,12 +22,12 @@ class adminPanel
                 $this->controller = new Main();
             }
 
-            require_once("app/admin/themes/Default/index.php");
+            require_once("themes/admin/Default/index.php");
             return;
         }
 
         if(!isset($_POST['username']) && !isset($_POST['password']) ) {
-            require_once("app/admin/themes/Default/login.php");
+            require_once("themes/admin/Default/login.php");
         } else {
             $this->login($_POST['username'], $_POST['password']);
         }

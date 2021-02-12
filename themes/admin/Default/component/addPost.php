@@ -19,11 +19,11 @@
 
                 <tr>
                     <th valign="top" class="post_header">Składniki <span class="required_icon">*</span></th>
-                    <td class="new_post_td">
-                        <ul>
+                    <td class="new_post_td" id="recipe_ingredients_container">
+                        <ul id="recipe_ingredients_list">
                             <li><input id="recipe_ingredients_input" type="text" ></li>
                         </ul>
-                        <input name="recipe_ingredients" type="text" hidden="hidden">
+                        <input name="recipe_ingredients" id="recipe_ingredients_data" type="text" hidden="hidden">
                     </td>
                 </tr>
 
@@ -65,4 +65,5 @@
 
     </form>
 </div>
-<script src="../app/admin/themes/Default/js/linkHandler.js"></script>
+<script src="<?php echo ABSPATH."themes/admin/Default/js/ingredientsHandler.js" ?>"></script>
+<script src="<?php echo ABSPATH."themes/admin/Default/js/linkHandler.js" ?>"></script>

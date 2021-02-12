@@ -7,7 +7,7 @@ class App {
 
     public function __construct(){
 
-        $url = $this -> parseUrl();
+        $url = parseUrl();
 
         if(isset($url[0]) && file_exists("../cheat/app/". $url[0] . '.php')){
 
@@ -17,7 +17,7 @@ class App {
             require_once ("../cheat/app/".$this->controller.".php");
             $this -> controller = new $this -> controller;
         } else {
-            if(!isset($url[0])) {
+            if(!isset($url[0]) || $url[0] == "") {
                 $this->controller = "home";
                 require_once ("../cheat/app/".$this->controller.".php");
                 $this -> controller = new $this -> controller;
@@ -39,11 +39,5 @@ class App {
         }
 
         call_user_func_array([$this->controller, $this->method], $this->params);
-    }
-
-    public function parseUrl(){
-        if(isset($_GET['url'])){
-            return $url = explode("/", filter_var(rtrim($_GET["url"], "/"), FILTER_SANITIZE_URL));
-        }
     }
 }

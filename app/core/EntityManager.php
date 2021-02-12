@@ -7,7 +7,7 @@ class EntityManager {
         $this->pdo = $pdo;
     }
 
-    public function flush($object) {
+    public function create($object) {
         $className = get_class($object);
 
         $query = "INSERT into $className (";
