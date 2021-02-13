@@ -7,11 +7,11 @@
             <h1 class="page_title"><a href="home"><?php echo PAGE_NAME ?></a></h1>
             <nav class="nav flex">
                 <div class="left_side">
-                    <div class="nav_link">Strona główna</div>
+                    <div class="nav_link"><a class="nav_link_a" href="<?php echo ABSPATH."strona-glowna" ?>">Strona główna</a></div>
                 </div>
                 <div class="right_side flex">
-                    <div class="nav_link">Przepisy</div>
-                    <div class="nav_link">Blog</div>
+                    <div class="nav_link"><a class="nav_link_a" href="<?php echo ABSPATH."strona-glowna" ?>">Przepisy</a></div>
+                    <div class="nav_link"><a class="nav_link_a" href="<?php echo ABSPATH."strona-glowna" ?>">Blog</a></div>
                 </div>
             </nav>
         </div>

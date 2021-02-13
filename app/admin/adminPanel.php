@@ -44,7 +44,7 @@ class adminPanel
 
         if(count($response) > 0) {
             $_SESSION['logged'] = true;
-            require_once("themes/Default/index.php");
+            require_once("themes/admin/Default/index.php");
         }
         else {
             unset($_POST['username']);

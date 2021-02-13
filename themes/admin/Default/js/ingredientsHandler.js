@@ -1,7 +1,7 @@
 const ingredientsContainer = document.getElementById("recipe_ingredients_container");
 const ingredientsDataInput = document.getElementById("recipe_ingredients_data");
 let input = document.getElementById("recipe_ingredients_input");
-let editedElementId = 0;
+let editedElementId = input.parentElement.id;
 
 ingredientsContainer.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -23,7 +23,6 @@ ingredientsContainer.addEventListener("keydown", function(event) {
 
 function editElement(id) {
     if(id != editedElementId) {
-        alert(input.value);
         if(input.value == "") {
             document.getElementById(editedElementId).remove();
         } else {
@@ -34,7 +33,6 @@ function editElement(id) {
         input = document.getElementById("recipe_ingredients_input");
         input.focus();
         editedElementId = id;
-        alert(editedElementId);
     }
 }
 
@@ -50,5 +48,4 @@ function updateData() {
     });
     data = JSON.stringify(data);
     ingredientsDataInput.value = data;
-    console.log(ingredientsDataInput.value );
 }

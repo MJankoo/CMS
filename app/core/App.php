@@ -1,7 +1,7 @@
 <?php
 
 class App {
-    protected $controller = "home";
+    protected $controller = "homeController";
     protected $method = "index";
     protected $params = [];
 
@@ -9,16 +9,15 @@ class App {
 
         $url = parseUrl();
 
-        if(isset($url[0]) && file_exists("../cheat/app/". $url[0] . '.php')){
-
-            $this->controller = $url[0];
+        if(isset($url[0]) && isset(ROUTES[$url[0]])) {
+            $this->controller = ROUTES[$url[0]];
             unset($url[0]);
 
             require_once ("../cheat/app/".$this->controller.".php");
             $this -> controller = new $this -> controller;
         } else {
             if(!isset($url[0]) || $url[0] == "") {
-                $this->controller = "home";
+                $this->controller = "homeController";
                 require_once ("../cheat/app/".$this->controller.".php");
                 $this -> controller = new $this -> controller;
             } else {

@@ -9,21 +9,29 @@
                 <tbody>
                 <tr>
                     <th valign="top" class="post_header">Tytuł <span class="required_icon">*</span></th>
-                    <td class="new_post_td"><input class="new_post_input" id="recipe_title_input" name="recipe_title" type="text" placeholder="Tytuł przepisu" value="<?php echo $post['title'] ?>"></td>
+                    <td class="new_post_td"><input class="new_post_input" id="recipe_title_input" name="recipe_title" type="text" placeholder="Tytuł przepisu" value="<?php echo $post->getTitle() ?>"></td>
                 </tr>
 
                 <tr>
                     <th valign="top" class="post_header">Opis <span class="required_icon">*</span></th>
-                    <td class="new_post_td"><input class="new_post_input" name="recipe_description" type="text" placeholder="Opis przepisu" value="<?php echo $post['description'] ?>"></td>
+                    <td class="new_post_td"><input class="new_post_input" name="recipe_description" type="text" placeholder="Opis przepisu" value="<?php echo $post->getDescription() ?>"></td>
                 </tr>
 
                 <tr>
                     <th valign="top" class="post_header">Składniki <span class="required_icon">*</span></th>
                     <td class="new_post_td" id="recipe_ingredients_container">
                         <ul id="recipe_ingredients_list">
-                            <li><input id="recipe_ingredients_input" type="text" ></li>
+                            <?php
+                            $i=0;
+                            foreach(json_decode($post->getIngredients()) as $ingredient) {
+                                echo "<li id='".$i."' onclick='editElement(".$i.")'>".$ingredient."</li>";
+                                $i++;
+                            }
+
+                            ?>
+                            <li id="-1"><input id="recipe_ingredients_input" type="text" ></li>
                         </ul>
-                        <input name="recipe_ingredients" id="recipe_ingredients_data" type="text" hidden="hidden">
+                        <input name="recipe_ingredients" id="recipe_ingredients_data" type="text" hidden="hidden" value='<?php echo $post->getIngredients()?>'>
                     </td>
                 </tr>
 
@@ -32,7 +40,7 @@
                     <td class="new_post_td">
                         <div class="new_post_content">
                             <div class="new_post_editor"></div>
-                            <textarea class="new_post_content_input" name="recipe_content"><?php echo $post['content'] ?></textarea>
+                            <textarea class="new_post_content_input" name="recipe_content"><?php echo $post->getContent() ?></textarea>
                         </div>
                     </td>
                 </tr>
@@ -52,11 +60,11 @@
         <div class="new_post_right_box">
             <h3>Ustawienia</h3>
             <h4 class="recipe_settings_title">Data publikacji</h4>
-            <input class="recipe_settings_input" type="date" name="recipe_date" value="<?php echo $post['date'] ?>">
+            <input class="recipe_settings_input" type="date" name="recipe_date" value="<?php echo $post->getDate() ?>">
             <h4 class="recipe_settings_title">Link</h4>
-            <input class="recipe_settings_input" id="recipe_link_input" type="text" name="recipe_link" placeholder="link-do-przepisu" value="<?php echo $post['link'] ?>">
+            <input class="recipe_settings_input" id="recipe_link_input" type="text" name="recipe_link" placeholder="link-do-przepisu" value="<?php echo $post->getLink() ?>">
             <h4 class="recipe_settings_title">Status</h4>
-            <select class="recipe_status_input" name="recipe_status" value="<?php echo $post['status'] ?>">
+            <select class="recipe_status_input" name="recipe_status">
                 <option value="active">Aktywny</option>
                 <option value="inactive">Niektywny</option>
             </select>

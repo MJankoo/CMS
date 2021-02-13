@@ -9,10 +9,11 @@ class Przepis {
     private $ingredients;
     private $authorId;
     private $date;
+    private $preparationTime;
     private $categories;
     private $status;
 
-    public function __construct($link, $title, $authorId, $categories, $content, $date, $description, $ingredients, $status) {
+    public function __construct($link="", $title="", $authorId=0, $categories=0, $content="", $date="", $preparationTime="", $description="", $ingredients="", $status="") {
         $this->id = "";
         $this->link = $link;
         $this->title = $title;
@@ -21,6 +22,7 @@ class Przepis {
         $this->ingredients = $ingredients;
         $this->authorId = $authorId;
         $this->date = $date;
+        $this->preparationTime = $preparationTime;
         $this->categories = $categories;
         $this->status = $status;
     }
@@ -28,6 +30,11 @@ class Przepis {
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function getLink()
@@ -98,6 +105,16 @@ class Przepis {
     public function setDate($date)
     {
         $this->date = $date;
+    }
+
+    public function getPreparationTime()
+    {
+        return $this->preparationTime;
+    }
+
+    public function setPreparationTime($preparationTime)
+    {
+        $this->preparationTime = $preparationTime;
     }
 
     public function getCategories()

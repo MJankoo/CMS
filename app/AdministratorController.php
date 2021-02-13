@@ -1,6 +1,6 @@
 <?php
 
-class Administrator
+class AdministratorController
 {
     private $adminPanel;
 

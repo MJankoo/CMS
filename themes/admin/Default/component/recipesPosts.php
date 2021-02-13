@@ -34,18 +34,18 @@
                     else
                         echo("<tr class='data'>");
 
-                    echo "<td class='post_data'>".$post['id']."</td>";
-                    echo "<td class='post_data post_title'><a href=\"recipe/".$post['link']."\">".$post['title']."</a></td>";
-                    echo "<td class='post_data'>".$post['categories']."</td>";
-                    echo "<td class='post_data'>".$post['date']."</td>";
+                    echo "<td class='post_data'>".$post->getId()."</td>";
+                    echo "<td class='post_data post_title'><a href=\"recipe/".$post->getLink()."\">".$post->getTitle()."</a></td>";
+                    echo "<td class='post_data'>".$post->getCategories()."</td>";
+                    echo "<td class='post_data'>".$post->getDate()."</td>";
                     echo "<td class='post_status flex'>";
-                        if($post['status'] == 'active')
+                        if($post->getStatus() == 'active')
                             echo "<div class='status_box active'>Aktywny</div>";
 
-                        if($post['status'] == 'inactive')
+                        if($post->getStatus() == 'inactive')
                             echo "<div class='status_box inactive'>Nieaktywny</div>";
 
-                        if(strtotime($post['date']) > strtotime('now'))
+                        if(strtotime($post->getDate()) > strtotime('now'))
                             echo "<div class='status_box unpublished'>Zaplanowany</div>";
 
 
