@@ -51,10 +51,32 @@ class Repository {
 
     }
 
-    public function findAll($amount, $offset = 0) {
-        $query = "SELECT * FROM ".$this->table." ORDER BY id DESC LIMIT :amount OFFSET :offset";
+    public function findAll($amount, $offset = 0, $order = 'id', $conditions = []) {
+        $query = "SELECT * FROM ".$this->table;
+        $params = [];
+        if(!empty($conditions)) {
+            $query = $query." WHERE ";
+            $keys = array_keys($conditions);
+            $i=0;
+            foreach($conditions as $condition) {
+                if($keys[$i] == "date") {
+                    $query = $query."`".$keys[$i]."` <= :".$keys[$i];
+                } else {
+                    if($i == count($conditions) - 1) {
+                        $query = $query."`".$keys[$i]."` = :".$keys[$i];
+                    } else {
+                        $query = $query."`".$keys[$i]."` = :".$keys[$i]." AND ";
+                    }
+                }
+                array_push($params, $condition);
+                $i++;
+            }
+        }
+        array_push($params, $amount);
+        array_push($params, $offset);
+        $query =  $query." ORDER BY ".$order." DESC LIMIT :amount OFFSET :offset";
         $object = $this->pdo->prepare($query);
-        if($object->execute([$amount, $offset]) == true) {
+        if($object->execute($params) == true) {
             $setters = array_filter(get_class_methods($this->table), function($method) {
                 return 'set' === substr($method, 0, 3);
             });
@@ -69,6 +91,7 @@ class Repository {
                 }
                 array_push($returnedObjects, $returnedObject);
             }
+
 
             return $returnedObjects;
         } else {
