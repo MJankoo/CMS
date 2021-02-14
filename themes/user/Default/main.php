@@ -24,22 +24,22 @@
         <div class="worlds_cuisines_slider_container">
             <div class="worlds_cuisines_slider flex">
                 <div class="world_cuisine"">
-                    <img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY">
+                    <img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY">2kopia
                 </div>
                 <div class="world_cuisine">
-                    <img src="<?php echo ABSPATH ?>public/img/4.png" alt="DOZMIANY">
+                    <img src="<?php echo ABSPATH ?>public/img/4.png" alt="DOZMIANY">4kopia
                 </div>
                 <div class="world_cuisine" id="lastClone">
-                    <img src="<?php echo ABSPATH ?>public/img/5.png" alt="DOZMIANY">
+                    <img src="<?php echo ABSPATH ?>public/img/5.png" alt="DOZMIANY">5kopia
                 </div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/1.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/2.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/4.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/5.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine" id="firstClone"><img src="<?php echo ABSPATH ?>public/img/1.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/2.png" alt="DOZMIANY"></div>
-                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY"></div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/1.png" alt="DOZMIANY">1</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/2.png" alt="DOZMIANY">2</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY">3</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/4.png" alt="DOZMIANY">4</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/5.png" alt="DOZMIANY">5</div>
+                <div class="world_cuisine" id="firstClone"><img src="<?php echo ABSPATH ?>public/img/1.png" alt="DOZMIANY">1kopia</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/2.png" alt="DOZMIANY">2kopia</div>
+                <div class="world_cuisine"><img src="<?php echo ABSPATH ?>public/img/3.png" alt="DOZMIANY">3kopia</div>
 
             </div>
         </div>

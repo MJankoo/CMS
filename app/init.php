@@ -10,4 +10,5 @@ require_once("core/Repository.php");
 require_once("core/errorHandler.php");
 require_once("core/functions.php");
 
+require_once("model/Admin.php");
 require_once("model/Przepis.php");

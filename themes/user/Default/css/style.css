@@ -17,6 +17,22 @@ a {
     display: block;
 }
 
+.error_container {
+    text-align: center;
+    height: calc(100vh - 400px);
+}
+
+.error_code_title {
+    padding: 0;
+    text-align: center;
+    font-size: 85px;
+    margin: 150px 0 0;
+}
+
+.error_container a {
+    font-weight: bold;
+}
+
 .container {
     width: 80%;
     margin-left: auto;
@@ -374,6 +390,7 @@ footer {
 
 .recipe_images img {
     width: 100%;
+    border-radius: 40px;
 }
 
 .recipe_data {
@@ -413,4 +430,21 @@ footer {
 .recipe_section_title {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
+}
+
+.recipe_ingredients_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 30px;
+}
+
+.recipe_ingredient {
+    display: block;
+    font-size: 20px;
+    height: 35px;
+}
+.recipe_ingredient img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }

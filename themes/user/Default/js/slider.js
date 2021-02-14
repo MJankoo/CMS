@@ -11,29 +11,30 @@ slider.style.transform = 'translateX('+(-size * sliderCurrentPosition)+'px)';
 
 //
 nextBtn.addEventListener('click', function() {
-    if(sliderCurrentPosition >= (sliderItems.length-3)) return;
+    if(sliderCurrentPosition >= (sliderItems.length-4)) return;
     slider.style.transition = "transform 0.3s ease-in-out";
     sliderCurrentPosition++;
     slider.style.transform = 'translateX('+(-size * sliderCurrentPosition)+'px)';
 });
 
 prevBtn.addEventListener('click', function() {
-    if(sliderCurrentPosition <= 3) return;
+    console.log(sliderCurrentPosition);
+    if(sliderCurrentPosition <= 0) return;
     slider.style.transition = "transform 0.3s ease-in-out";
     sliderCurrentPosition--;
     slider.style.transform = 'translateX('+(-size * sliderCurrentPosition)+'px)';
 });
 
 slider.addEventListener('transitionend', function () {
-    if(sliderItems[sliderCurrentPosition].id === 'lastClone') {
+    if(sliderItems[sliderCurrentPosition+1].id === 'lastClone') {
         slider.style.transition = "none";
-        sliderCurrentPosition = sliderItems.length - 4;
+        sliderCurrentPosition = sliderItems.length - 5;
         slider.style.transform = 'translateX('+(-size * sliderCurrentPosition)+'px)';
     }
 
-    if(sliderItems[sliderCurrentPosition].id === 'firstClone') {
+    if(sliderItems[sliderCurrentPosition+1].id === 'firstClone') {
         slider.style.transition = "none";
-        sliderCurrentPosition = sliderItems.length - sliderCurrentPosition;
+        sliderCurrentPosition = sliderItems.length - (sliderCurrentPosition+2);
         slider.style.transform = 'translateX('+(-size * sliderCurrentPosition)+'px)';
     }
 });

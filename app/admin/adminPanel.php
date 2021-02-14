@@ -39,11 +39,13 @@ class adminPanel
      private function login($username, $password) {
 
         $params = ['username' => $username, 'password' => $password];
-        $repository = $this->db->getRepository('Admins');
+        $repository = $this->db->getRepository('Admin');
         $response = $repository->findBy($params);
 
-        if(count($response) > 0) {
+        if($response != null) {
             $_SESSION['logged'] = true;
+            require_once ("app/admin/controllers/Main.php");
+            $this->controller = new Main();
             require_once("themes/admin/Default/index.php");
         }
         else {

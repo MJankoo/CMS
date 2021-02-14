@@ -2,7 +2,7 @@
     Dodawanie przepisu
 </div>
 <div class="right_side_container posts_container">
-    <form action method="post">
+    <form enctype="multipart/form-data" action method="post">
     <div class="post_box">
         <div class="post_box_title">Informacje ogólne</div>
         <table>
@@ -31,12 +31,18 @@
                     <th valign="top" class="post_header">Zawartość <span class="required_icon">*</span></th>
                     <td class="new_post_td">
                         <div class="new_post_content">
-                            <div class="new_post_editor"></div>
+                            <div class="new_post_editor flex">
+                                <div class="editor_bold_button editor_button">B</div>
+                                <div class="editor_italic_button editor_button">I</div>
+                            </div>
                             <textarea class="new_post_content_input" name="recipe_content"></textarea>
                         </div>
                     </td>
                 </tr>
-
+                <tr>
+                    <th valign="top" class="post_header">Czas przygotowania <span class="required_icon">*</span></th>
+                    <td class="new_post_td"><input class="new_post_input" name="recipe_preparation_time" type="text" placeholder="Czas przygotowania"></td>
+                </tr>
                 <tr>
                     <th valign="top" class="post_header">Kategorie <span class="required_icon">*</span></th>
                     <td class="new_post_td"><input class="new_post_input" name="recipe_categories" type="text" placeholder="Kategorie"></td>
@@ -47,6 +53,23 @@
 
     <div class="post_box">
         <div class="post_box_title">Zdjęcia</div>
+        <table>
+            <tbody>
+                <tr>
+                    <th valign="top" class="post_header">Miniatura <span class="required_icon">*</span></th>
+                    <td class="new_post_td"><input type="file" name="recipe_main_image"></td>
+                </tr>
+                <tr>
+                    <th valign="top" class="post_header">Zdjęcia dodatkowe</th>
+                    <td class="new_post_td">
+                        <div id="dropContainer">
+                            Przenieś tutaj
+                        </div>
+                        <input id="imagesInput" type="file" name="recipe_images[]" multiple>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
         <div class="new_post_right_box">
@@ -67,3 +90,4 @@
 </div>
 <script src="<?php echo ABSPATH."themes/admin/Default/js/ingredientsHandler.js" ?>"></script>
 <script src="<?php echo ABSPATH."themes/admin/Default/js/linkHandler.js" ?>"></script>
+<script src="<?php echo ABSPATH."themes/admin/Default/js/imageHandler.js" ?>"></script>

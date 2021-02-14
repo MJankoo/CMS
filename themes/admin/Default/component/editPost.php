@@ -39,15 +39,23 @@
                     <th valign="top" class="post_header">Zawartość <span class="required_icon">*</span></th>
                     <td class="new_post_td">
                         <div class="new_post_content">
-                            <div class="new_post_editor"></div>
+                            <div class="new_post_editor flex">
+                                <div class="editor_bold_button editor_button">B</div>
+                                <div class="editor_italic_button editor_button">I</div>
+                            </div>
                             <textarea class="new_post_content_input" name="recipe_content"><?php echo $post->getContent() ?></textarea>
                         </div>
                     </td>
                 </tr>
 
                 <tr>
+                    <th valign="top" class="post_header">Czas przygotowania <span class="required_icon">*</span></th>
+                    <td class="new_post_td"><input class="new_post_input" name="recipe_preparing_time" type="text" placeholder="Czas przygotowania" value="<?php echo $post->getPreparationTime() ?>"></td>
+                </tr>
+
+                <tr>
                     <th valign="top" class="post_header">Kategorie <span class="required_icon">*</span></th>
-                    <td class="new_post_td"><input class="new_post_input" name="recipe_categories" type="text" placeholder="Kategorie" ></td>
+                    <td class="new_post_td"><input class="new_post_input" name="recipe_categories" type="text" placeholder="Kategorie" value="<?php echo $post->getCategories() ?>"></td>
                 </tr>
                 </tbody>
             </table>
@@ -55,6 +63,23 @@
 
         <div class="post_box">
             <div class="post_box_title">Zdjęcia</div>
+            <table>
+                <tbody>
+                <tr>
+                    <th valign="top" class="post_header">Miniatura <span class="required_icon">*</span></th>
+                    <td class="new_post_td"><input type="file" name="recipe_main_image"></td>
+                </tr>
+                <tr>
+                    <th valign="top" class="post_header">Zdjęcia dodatkowe</th>
+                    <td class="new_post_td">
+                        <div id="dropContainer">
+                            Przenieś tutaj
+                        </div>
+                        <input id="imagesInput" type="file" name="recipe_images[]" multiple>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="new_post_right_box">
@@ -66,7 +91,7 @@
             <h4 class="recipe_settings_title">Status</h4>
             <select class="recipe_status_input" name="recipe_status">
                 <option value="active">Aktywny</option>
-                <option value="inactive">Niektywny</option>
+                <option value="inactive" <?php if($post->getStatus() == "inactive") echo "selected"?>>Niektywny</option>
             </select>
             <input class="recipe_form_submit" type="submit" value="Opublikuj">
         </div>

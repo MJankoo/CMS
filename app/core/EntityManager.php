@@ -58,8 +58,6 @@ class EntityManager {
         }
         $query = $query." WHERE `id` = :id;";
 
-        var_dump($query);
-
         $params = [];
         $getters = array_filter(get_class_methods($className), function($method) {
             return 'get' === substr($method, 0, 3);
@@ -69,8 +67,6 @@ class EntityManager {
         }
 
         $params[count($params)-1] = array_shift($params);
-
-        print_r($params);
 
         $question = $this->pdo->prepare($query);
         return $question->execute($params);
