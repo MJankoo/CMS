@@ -4,6 +4,7 @@ class Przepis {
     private $id;
     private $link;
     private $title;
+    private $images;
     private $description;
     private $content;
     private $ingredients;
@@ -13,10 +14,11 @@ class Przepis {
     private $categories;
     private $status;
 
-    public function __construct($link="", $title="", $authorId=0, $categories=0, $content="", $date="", $preparationTime="", $description="", $ingredients="", $status="") {
+    public function __construct($link="", $title="", $images="",$authorId=0, $categories=0, $content="", $date="", $preparationTime="", $description="", $ingredients="", $status="") {
         $this->id = "";
         $this->link = $link;
         $this->title = $title;
+        $this->images = $images;
         $this->description = $description;
         $this->content = $content;
         $this->ingredients = $ingredients;
@@ -55,6 +57,16 @@ class Przepis {
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    public function setImages($images)
+    {
+        $this->images = $images;
     }
 
     public function getDescription()

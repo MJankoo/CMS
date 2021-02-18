@@ -44,7 +44,7 @@ class EntityManager {
     public function update($object) {
         $className = get_class($object);
 
-        $query = "UPDATE $className SET";
+        $query = "UPDATE $className SET ";
         $reflect = new ReflectionClass($className);
         $properties = $reflect->getProperties();
         foreach ($properties as $property) {

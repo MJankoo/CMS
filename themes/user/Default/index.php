@@ -59,8 +59,9 @@
                 <div class="last_recipes_main">
                     <?php
                     foreach ($data['posts'] as $post) {
+                        $mainImage = json_decode($post->getImages(), true)[0];
                         echo '<div class="recipe flex">';
-                        echo '<div class="recipe_image"><img src="'.ABSPATH.'public/img/buleczki.png" alt="buleczki"></div>';
+                        echo '<div class="recipe_image"><img src="'.ABSPATH.'public/recipes/'.$post->getLink().'/'.$mainImage.'" alt="buleczki"></div>';
                         echo '<div class="recipe_data">';
                         echo '<span class="recipe_date">'.convertDate($post->getDate()).'</span>';
                         echo '<h3 class="recipe_title">'.$post->getTitle().'</h3>';

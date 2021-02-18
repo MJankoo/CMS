@@ -291,12 +291,11 @@ a {
 }
 
 .recipe_image {
-    width: 20%;
-    margin-right: 20px;
+    width: 25%;
 }
 
 .recipe_image img {
-    width: 85%;
+    width: 100%;
     border-radius: 25px;
 }
 
@@ -390,7 +389,12 @@ footer {
 
 .recipe_images img {
     width: 100%;
-    border-radius: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.recipe_images img:first-child {
+    margin-top: 0;
 }
 
 .recipe_data {
@@ -447,4 +451,8 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 8px;
+}
+
+.recipe_content {
+    margin-top: 50px;
 }

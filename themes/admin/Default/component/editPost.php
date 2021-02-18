@@ -2,7 +2,7 @@
     Edytowanie przepisu
 </div>
 <div class="right_side_container posts_container">
-    <form action method="post">
+    <form enctype="multipart/form-data" action method="post">
         <div class="post_box">
             <div class="post_box_title">Informacje ogólne</div>
             <table>
@@ -50,7 +50,7 @@
 
                 <tr>
                     <th valign="top" class="post_header">Czas przygotowania <span class="required_icon">*</span></th>
-                    <td class="new_post_td"><input class="new_post_input" name="recipe_preparing_time" type="text" placeholder="Czas przygotowania" value="<?php echo $post->getPreparationTime() ?>"></td>
+                    <td class="new_post_td"><input class="new_post_input" name="recipe_preparation_time" type="text" placeholder="Czas przygotowania" value="<?php echo $post->getPreparationTime() ?>"></td>
                 </tr>
 
                 <tr>

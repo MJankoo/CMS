@@ -1,7 +1,6 @@
 <?php
 
 $post = $data['post'];
-
 ?>
 
 <!DOCTYPE HTML>
@@ -12,7 +11,11 @@ $post = $data['post'];
 
 <div class="container recipe_container flex">
     <div class="recipe_images">
-        <img src="<?php echo ABSPATH."public/recipes/".$post->getLink()."/main_image.png"?>" alt="main_image">
+        <?php
+            foreach(json_decode($post->getImages(), true) as $image) {
+                echo "<img src='".ABSPATH."public/recipes/".$post->getLink()."/".$image."' alt='main_image'>";
+            }
+        ?>
     </div>
     <div class="recipe_data">
         <div class="recipe_header">
@@ -37,7 +40,7 @@ $post = $data['post'];
         </div>
         <div class="recipe_content">
             <h3 class="recipe_section_title">Sposób przygotowania:</h3>
-            <?php echo $post->getContent() ?>
+            <?php echo nl2br($post->getContent()) ?>
         </div>
     </div>
 </div>

@@ -15,9 +15,11 @@
                 </div>
             </nav>
         </div>
-        <div class="search_container flex">
-            <input class="search_input" name="search" type="text" placeholder="Szukaj...">
-            <div class="search_icon"><img src="<?php echo ABSPATH ?>themes/user/Default/img/search-icon.svg" alt="search-icon"></div>
+        <div class="search_container">
+            <form class="flex" action="<?php echo ABSPATH ?>szukaj" method="get">
+                <input class="search_input" name="search" type="text" placeholder="Szukaj...">
+                <div class="search_icon"><img src="<?php echo ABSPATH ?>themes/user/Default/img/search-icon.svg" alt="search-icon"></div>
+            </form>
         </div>
     </div>
 </div>
