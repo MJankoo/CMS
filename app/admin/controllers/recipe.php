@@ -96,11 +96,8 @@ class Recipe {
             rename('public/recipes/'.$oldLink, 'public/recipes/'.$link);
         }
 
-        var_dump($_FILES['recipe_main_image']['name'] != "");
-        var_dump($_FILES);
-        var_dump($_FILES['recipe_main_image']['name'] != "" || $_FILES['recipe_images']['name'][0] != "");
+       
         if($_FILES['recipe_main_image']['name'] != "") {
-            echo("lala");
             $images = [];
             $targetDir = "public/recipes/".$link."/";
             $mainImageName = "main_image.".pathinfo($_FILES['recipe_main_image']['name'], PATHINFO_EXTENSION);
